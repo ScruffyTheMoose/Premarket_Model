@@ -16,10 +16,10 @@ etfs = pd.read_csv('etfs.csv')['etfs'].tolist()
 
 
 # collecting historical data from 2010-01-01 to 2021-12-01 and saving to csv
-# for symbol in etfs:
-#     try:
-#         output = si.get_data(ticker=symbol, start_date=start, end_date=end)
-#         output.to_csv(path_or_buf=f"etf_data/{symbol}.csv")
-#     except Exception:
-#         print(symbol + "is bad, it needs to be killed with fire.")
-#         etfs.remove(symbol)
+for symbol in etfs:
+    try:
+        output = si.get_data(ticker=symbol, start_date=start, end_date=end)
+        output.to_csv(path_or_buf=f"etf_data/{symbol}.csv")
+    except Exception:
+        print(symbol + " produced an error when retrieving data, continuing...")
+        etfs.remove(symbol)
