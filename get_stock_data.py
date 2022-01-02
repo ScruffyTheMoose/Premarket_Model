@@ -14,7 +14,7 @@ stocks = si.tickers_sp500()
 for symbol in stocks:
     try:
         output = si.get_data(ticker=symbol, start_date=start, end_date=end)
-        output.to_csv(path_or_buf=f"stock_data/{symbol}.csv")
+        output.to_csv(path_or_buf=f"raw_stock_data/{symbol}.csv")
     except Exception:
         print(symbol + " produced an error when retrieving data, continuing...")
         stocks.remove(symbol) # removing from list incase we need to use this list later
