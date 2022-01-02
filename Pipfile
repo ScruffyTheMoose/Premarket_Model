@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 pandas = "*"
 yahoo-fin = "*"
+scikit-learn = "*"
 
 [dev-packages]
 

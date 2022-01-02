@@ -22,4 +22,4 @@ for symbol in etfs:
         output.to_csv(path_or_buf=f"etf_data/{symbol}.csv")
     except Exception:
         print(symbol + " produced an error when retrieving data, continuing...")
-        etfs.remove(symbol)
+        etfs.remove(symbol) # removing from list incase we need to use this list later
