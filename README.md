@@ -1,0 +1,3 @@
+`Premarket_Model` is a library where I will be testing the methods described in the paper linked below. Better description to come...
+
+https://arxiv.org/abs/1605.00003 
